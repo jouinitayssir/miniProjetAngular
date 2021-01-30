@@ -1,0 +1,31 @@
+
+<div class="main">
+<header style="background-color: rgb(1, 1, 119);">
+        <div class="logo"><img class="navimg" src="../assets/unnamed.jpg" > Espace Admin</div>
+      <div class="date">
+          <div>DATE ET ADRESS</div>
+          <div><img src="../assets/off.png" class="navimg"></div>
+      </div>
+      
+    
+</header>
+<section>
+    <nav style="background-color: rgb(1, 1, 119);">
+        <br>
+        <a><img class="navimg" src="../assets/unnamed (1).png">
+          <input type="text" height="50px" placeholder="Chercher Session"></a>
+        <br>
+        <br>
+        <a routerLink="/admin/dashboard" routerLinkActive="active"><img class="navimg" src="../assets/image2.png" >Dashboard</a>
+        <hr />
+        <a routerLink="/admin/session"><img class="navimg" src="../assets/image12.png" >Sessions</a>
+        <hr />
+        <a routerLink="/admin/formateur" > <img class="navimg" src="../assets/img1.png">Formateurs</a>
+        <hr />
+        <a routerLink="/admin/participant"><img class="navimg" src="../assets/unnamed.png" >Participants</a>
+        </nav>
+  <article >
+    <router-outlet></router-outlet>
+  </article>
+</section>
+</div>

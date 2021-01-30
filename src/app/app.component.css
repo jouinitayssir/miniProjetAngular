@@ -1,0 +1,117 @@
+section {
+    width: 100%;
+    background-color: #32435b;
+}
+h1{
+    Color : #ffffff;
+}
+.description{
+    Font-style: italic ;
+    Color : #ffffff;
+}
+:host {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section {
+ width: 100%;
+ background-color: #32435b;
+}
+section > header {
+ color: #ffffff;
+ padding: 10px;
+}
+section > header > h1 {
+ font-size: 2em;
+}
+section > header .description {
+ font-style: italic;
+}
+.session-item{
+    display: flex;  
+}
+* {
+    box-sizing: border-box;
+  }
+  
+ 
+  /* Style the header */
+  header {
+    font-size: 20px;
+    color: white;
+    display: flex;
+  }
+ 
+  .logo{
+      width: 50%;
+
+  }
+  .date{
+      width: 50%;
+      text-align: right;
+      display: inline-block;
+  }
+  /* Container for flexboxes */
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav li {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style the content */
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 0px;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-shadow: #ccc;
+    color: #ffffff;
+}
+.main{
+    width: 100%;
+    height: 100%;
+}
+input{
+    width: 350px;
+    height: 60px;
+}
+.navimg{
+    border-radius: 99px;
+    width: 50px;
+    height: 50px;
+}

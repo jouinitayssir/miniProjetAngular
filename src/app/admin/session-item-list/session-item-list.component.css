@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;
+  padding: 10px;
+}
+header {
+  color: #ffffff;
+  padding: 10px;
+}
+header > h1 {
+  font-size: 2em;
+}
+section {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+section > app-session-item {
+  margin: 10px;
+}
+footer {
+  text-align: right;
+}
+footer .icon {
+  width: 64px;
+  height: 64px;
+  margin: 15px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 68px;
+  background-color: #53ace4;
+}
+nav .icon {
+  width: 48px;
+  height: 48px;
+  margin: 10px;
+  border-radius:100px;
+}

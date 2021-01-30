@@ -1,0 +1,27 @@
+.icon-action{
+	width: 50px;
+	height: 50px;
+}
+.formateur-table {
+	width: 100%;
+}
+.formateur-table thead {
+	background-color: cadetblue;
+}
+.formateur-table thead th {
+	height: 32px;
+}
+.formateur-row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+}
+.formateur-row:nth-child(odd){
+	background-color: #f2f2f2;
+}
+.cell {
+	padding: 8px;
+	font-size: 12px;
+	background-color: darkgray;
+}
