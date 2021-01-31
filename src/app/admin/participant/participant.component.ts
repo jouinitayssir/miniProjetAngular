@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FakeparticipantserviceService } from '../../services/fakeparticipantservice.service';
+import { FakeparticipantService } from 'src/app/services/fakeparticipant.service';
+import { Participant } from "src/app/admin/participant";
 
 @Component({
   selector: 'app-participant',
@@ -8,12 +9,15 @@ import { FakeparticipantserviceService } from '../../services/fakeparticipantser
 })
 export class ParticipantComponent implements OnInit {
 
-  constructor(private participantService: FakeparticipantserviceService) { }
-
+  participants: Participant[] | undefined;
+  participant: Participant | undefined;
+  constructor(private participantService: FakeparticipantService) { }
   ngOnInit(): void {
+    this.participants = this.participantService.get();
   }
-  addParticipant(participantForm: any) {
-    console.log(participantForm);
-    this.participantService.add(participantForm);
-    }
+
+  onDelete(id: number) {
+    this.participant = this.participants?.find((element) => element.id == id)
+    this.participantService.delete(this.participant);
+  }
 }

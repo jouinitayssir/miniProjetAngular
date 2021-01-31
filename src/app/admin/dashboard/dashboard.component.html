@@ -2,11 +2,43 @@
 
 </header>
 <section>
-    <table>
-        <tr>
-            <td class="c1"><img src="assets/image12.png">5 Sessions</td>
-            <td class="c2"><img src="assets/unnamed.png">50 Participants</td>
-            <td class="c3"><img src="assets/img1.png">3 Formateurs</td>
+    <table class="stats">
+        <tr class="stats-row">
+            <td class="c1">
+                <img src="assets/image12.png">
+                <h5> 5 Sessions </h5>
+            </td>
+            <td class="c2">
+                <img src="assets/unnamed.png">
+                <h5> 50 Participants </h5>
+            </td>
+            <td class="c3">
+                <img src="assets/img1.png">
+                <h5> 3 Formateurs </h5>
+            </td>
         </tr>
     </table>
+    <div class="tables-infos">
+        <div class="table-track-session">
+            <table class="ctx-table">
+                <thead><tr><th>Track</th><th>Nombre de sessions</th></tr></thead>
+                <tbody>
+                    <tr *ngFor="let session of sessions" class="formateur-row">
+                        <td class="cell">{{session.track}}</td>
+                        <td class="cell">{{1}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-top-formateurs">
+            <table class="ctx-table">
+                <thead><tr><th>Top formateurs</th></tr></thead>
+                <tbody>
+                    <tr *ngFor="let formateur of formateurs" class="formateur-row">
+                        <td>{{formateur.name}} {{formateur.surname}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </section>

@@ -7,7 +7,7 @@ import { FakesessionitemService } from '../fakesessionitem.service';
   styleUrls: ['./session-item-list.component.css']
 })
 export class SessionItemListComponent implements OnInit {
-  sessionItems: import("../../../../../../../Users/Tayssir JOUINI/training-app/src/app/admin/session").Session[] | undefined;
+  sessionItems: import("src/app/admin/session").Session[] | undefined;
   constructor(private sessionItemService: FakesessionitemService) { }
   ngOnInit(): void {
     this.sessionItems= this.sessionItemService.get();

@@ -1,18 +1,18 @@
 <header>
 </header>
 <section>
-    <nav>
-        <a routerLink="/admin/list" routerLinkActive="active">
-        <img src="assets/list.png" class="icon" />
-        </a>
-        <a routerLink="/admin/add" >
-        <img  src="assets/add.png" class="icon" />
-        </a>
-        <a [routerLink]="['/admin/edit', 1]" >
-        <img src="assets/edit.png" class="icon" />
-        </a>
-       </nav>
+  <nav>
+    <a routerLink="/admin/list" routerLinkActive="active">
+      <img src="assets/list.png" class="icon" />
+    </a>
+    <a routerLink="/admin/add">
+      <img src="assets/add.png" class="icon" />
+    </a>
+    <a [routerLink]="['/admin/edit', 1]">
+      <img src="assets/edit.png" class="icon" />
+    </a>
+  </nav>
   <app-session-item *ngFor="let sessionItem of sessionItems" [session]="sessionItem"
-                    [ngClass]="{'session-web': sessionItem.name === 'Web', 'session-mobile': sessionItem.name === 'Mobile'}">
+    [ngClass]="{'session-web': sessionItem.name === 'Web', 'session-mobile': sessionItem.name === 'Mobile'}">
   </app-session-item>
 </section>

@@ -8,50 +8,47 @@ import { SessionAddFormComponent } from './session-add-form/session-add-form.com
 import { SessionEditFormComponent } from './session-edit-form/session-edit-form.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { FormateurComponent } from './formateur/formateur.component';
-import { ParticipantComponent } from './participant/participant.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AddComponent as addP} from './participant/add/add.component';
-import { EditComponent as editP} from './participant/edit/edit.component';
+
+import { FormateurComponent } from './formateur/formateur.component';
+import { AddComponent as AddParticipantComponent } from './participant/add/add.component';
+import { EditComponent as EditParticipantComponent } from './participant/edit/edit.component';
+
+import { ParticipantComponent } from './participant/participant.component';
+import { AddComponent as AddFormateurComponent } from './formateur/add/add.component';
+import { EditComponent as EditFormateurComponent } from './formateur/edit/edit.component';
 const adminRoutes: Routes = [
     {
         path: '',
         component: AdminComponent,
         children: [
-            { path: 'add', component: SessionAddFormComponent },
+            {   
+                path: 'add', 
+                component: SessionAddFormComponent 
+            },
             {
-                path: 'edit/:id', component:
-                    SessionEditFormComponent
+                path: 'edit/:id', 
+                component: SessionEditFormComponent
             },
             {
                 path: 'list', component: SessionItemListComponent
             },
-            {
-                path: 'formateur',
-                component: FormateurComponent
-              },
-              {
-                path: 'dashboard',
-                component: DashboardComponent
-              },
-              {
-                path: 'participant',
-                component: ParticipantComponent, children: [
-                {
-                    path:'add', component: addP 
-                },
-                {
-                    path:'edit', component: editP 
-                }
+            { path: 'dashboard', component: DashboardComponent },
             
-                ]
-              },
-              {
+            { path: 'formateur', component: FormateurComponent},
+            { path: 'add-formateur', component: AddFormateurComponent },
+            { path: 'edit-formateur/:id', component: EditFormateurComponent },
+            
+            { path: 'participant', component: ParticipantComponent },
+            { path: 'add-participant', component: AddParticipantComponent },
+            { path: 'edit-participant/:id', component: EditParticipantComponent },
+
+            {
                 path: 'session',
                 component: SessionItemListComponent
-              },
+            },
 
-           
+
             { path: '', redirectTo: 'list', pathMatch: 'full' }
         ],
     }
@@ -68,9 +65,11 @@ const adminRoutes: Routes = [
         SessionEditFormComponent,
         AdminComponent,
         ParticipantComponent,
-        addP,
-        editP,
-        ],
+        AddParticipantComponent,
+        EditParticipantComponent,
+        AddFormateurComponent,
+        EditFormateurComponent,
+    ],
     providers: [],
     bootstrap: [AdminComponent]
 })

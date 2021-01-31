@@ -1,7 +1,7 @@
 <div>
         <div>
-          <img class="icon-action" src="/assets/refresh.png" />
-          <img class="icon-action" src="/assets/add.png" />
+          <a><img class="icon-action" src="/assets/refresh.png" /></a>
+          <a routerLink="/admin/add-formateur" ><img class="icon-action" src="/assets/add.png" /></a>
         </div>
         <div>
           <table class="formateur-table">
@@ -11,18 +11,17 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let formateur of formateurs">
                 <td class="formateur-row">
                   <div>
-                    <span class="cell">Nom</span>
-                    <span class="cell">Prenom</span>
-                    <span class="cell">Adresse</span>
-                    <span class="cell">Email</span>
-                    <span class="cell">domaine d'expértise</span>
+                    <span class="cell">Nom: {{formateur.name}}</span>
+                    <span class="cell">Prenom: {{formateur.surname}}</span>
+                    <span class="cell">Email: {{formateur.email}}</span>
+                    <span class="cell">Expertise: {{formateur.expertise}}</span>
                   </div>
                   <div>
-                    <a href="#"><img class="icon-action" src="/assets/edit.png" /></a>
-                    <a href="#"><img class="icon-action" src="/assets/delete.png" /></a>
+                    <a [routerLink]="['/admin/edit-formateur', formateur.id]"><img class="icon-action" src="/assets/edit.png" /></a>
+                    <a (click)="onDelete(formateur.id)"><img class="icon-action" src="/assets/delete.png" /></a>
                   </div>
                 </td>
               </tr>

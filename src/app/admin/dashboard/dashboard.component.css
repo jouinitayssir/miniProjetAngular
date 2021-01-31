@@ -7,14 +7,59 @@
 .c3{
     background-color: purple ;
 }
+.c1, .c2, .c3 {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    width: 30%;
+}
 img{
-    height:300px;
-    width: 300px;
-    border-radius: 200px;
+    height: inherit;
+    width: inherit;
+    border-radius: 1000px;
 }
 td{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     color: honeydew;
-    margin: 10;
+    align-items: center;
+}
+.stats, .stats-row {
+    width: 100%;
+    display: flex;
+}
+
+.tables-infos{
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+.table-track-session{
+    width: 50%;
+    height: 100%;
+}
+.table-top-formateurs{
+    width: 50%;
+    height: 100%;
+}
+
+.ctx-table {
+	width: 100%;
+}
+.ctx-table thead {
+	background-color: cadetblue;
+}
+.ctx-table thead th {
+	height: 32px;
+}
+.formateur-row{
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px;
+}
+.ctx-row:nth-child(odd){
+	background-color: #f2f2f2;
+}
+.cell {
+    width: 100%;
 }

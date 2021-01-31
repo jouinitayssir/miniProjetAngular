@@ -7,21 +7,21 @@ import { SESSIONITEMS } from './sessions';
 export class FakesessionitemService {
 
   constructor() { }
-  get() {return SESSIONITEMS;}
-  add(sessionItem: import("../../../../../../Users/Tayssir JOUINI/training-app/src/app/admin/session").Session) {
+  get() { return SESSIONITEMS; }
+  add(sessionItem: import("../admin/session").Session) {
     sessionItem.id = SESSIONITEMS.length + 1;
     SESSIONITEMS.push(sessionItem);
-    }
+  }
 
-  delete(sessionItem: import("../../../../../../Users/Tayssir JOUINI/training-app/src/app/admin/session").Session) {
-      let index;
-      index = SESSIONITEMS.indexOf(sessionItem);
-      if (SESSIONITEMS.indexOf(sessionItem) >= 0) {
+  delete(sessionItem: import("../admin/session").Session) {
+    let index;
+    index = SESSIONITEMS.indexOf(sessionItem);
+    if (SESSIONITEMS.indexOf(sessionItem) >= 0) {
       SESSIONITEMS.splice(index, 1);
-      }
-      }
-      getSession(id: number) {
-        return SESSIONITEMS[id - 1];
-       }
-       
+    }
+  }
+  getSession(id: number) {
+    return SESSIONITEMS[id - 1];
+  }
+
 }
